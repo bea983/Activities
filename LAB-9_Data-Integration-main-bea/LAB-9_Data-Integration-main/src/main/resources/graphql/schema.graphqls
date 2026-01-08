@@ -1,0 +1,19 @@
+# Root Query type
+type Query {
+    allProducts: [Product]!
+    productById(id: ID!): Product
+}
+
+# Root Mutation type
+type Mutation {
+    createProduct(name: String!, price: Float!): Product!
+    updateProduct(id: ID!, name: String, price: Float): Product
+    deleteProduct(id: ID!): Boolean
+}
+
+# Product type
+type Product {
+    id: ID!
+    name: String!
+    price: Float!
+}
